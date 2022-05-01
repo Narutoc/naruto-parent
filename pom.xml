@@ -24,6 +24,7 @@
         <spring.cloud.starter.version>3.1.1</spring.cloud.starter.version>
         <spring.cloud.stream.version>3.2.2</spring.cloud.stream.version>
         <spring.security.data.version>5.6.2</spring.security.data.version>
+        <spring.data.version>2.6.3</spring.data.version>
         <commin.io.version>2.11.0</commin.io.version>
         <redisson.version>3.16.3</redisson.version>
         <redis.clients.version>3.7.0</redis.clients.version>
@@ -51,6 +52,8 @@
         <problem.version>0.27.0</problem.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.36</slf4j.version>
+        <httpclient.version>4.5.13</httpclient.version>
+        <httpcore.version>4.4.15</httpcore.version>
 
         <!--Plugin Version-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -290,6 +293,24 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-jpa</artifactId>
+                <version>${spring.data.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-keyvalue</artifactId>
+                <version>${spring.data.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>${spring.data.version}</version>
+            </dependency>
+
             <!--Redis Dependency-->
             <dependency>
                 <groupId>org.redisson</groupId>
@@ -515,6 +536,18 @@
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -533,7 +566,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven.compiler.version}</version>
                     <configuration>
-                        <sourece>${maven.compiler.source}</sourece>
+                        <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
                         <release>${maven.compiler.target}</release>
                         <showDeprecation>true</showDeprecation>
