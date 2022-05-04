@@ -54,6 +54,7 @@
         <slf4j.version>1.7.36</slf4j.version>
         <httpclient.version>4.5.13</httpclient.version>
         <httpcore.version>4.4.15</httpcore.version>
+        <druid.version>1.2.8</druid.version>
 
         <!--Plugin Version-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -553,6 +554,13 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>${httpcore.version}</version>
+            </dependency>
+
+            <!--引入druid连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
