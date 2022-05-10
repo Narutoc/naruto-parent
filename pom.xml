@@ -19,12 +19,13 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!--Dependency Version-->
-        <spring.cloud.version>2021.0.1</spring.cloud.version>
+        <spring.cloud.dependency.version>2021.0.1</spring.cloud.dependency.version>
         <spring.boot.version>2.6.6</spring.boot.version>
         <spring.cloud.starter.version>3.1.1</spring.cloud.starter.version>
         <spring.cloud.stream.version>3.2.2</spring.cloud.stream.version>
         <spring.security.data.version>5.6.2</spring.security.data.version>
         <spring.data.version>2.6.3</spring.data.version>
+        <springcloud.version>3.1.2</springcloud.version>
         <commin.io.version>2.11.0</commin.io.version>
         <redisson.version>3.16.3</redisson.version>
         <redis.clients.version>3.7.0</redis.clients.version>
@@ -48,7 +49,7 @@
         <snakeyaml.version>1.30</snakeyaml.version>
         <assertj.version>3.21.0</assertj.version>
         <aws.sqs.version>1.12.154</aws.sqs.version>
-        <aws.dynamodb.version>5.1.0</aws.dynamodb.version>
+        <aws.dynamodb.version>5.0.4</aws.dynamodb.version>
         <problem.version>0.27.0</problem.version>
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.36</slf4j.version>
@@ -84,7 +85,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${spring.cloud.dependency.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -182,7 +183,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${spring.cloud.starter.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.springframework.security</groupId>
@@ -198,7 +199,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-config</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${springcloud.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.fasterxml.jackson.core</groupId>
@@ -210,7 +211,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${springcloud.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.springframework.boot</groupId>
@@ -230,7 +231,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-stream</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${spring.cloud.stream.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.fasterxml.jackson.core</groupId>
@@ -270,7 +271,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-stream-test-support</artifactId>
-                <version>${spring.cloud.version}</version>
+                <version>${springcloud.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.springframework.boot</groupId>
