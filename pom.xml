@@ -57,7 +57,7 @@
         <httpcore.version>4.4.15</httpcore.version>
         <druid.version>1.2.8</druid.version>
         <net.bytebuddy.version>1.11.22</net.bytebuddy.version>
-        <quzrtz.version>2.2.3</quzrtz.version>
+        <compress.version>1.21</compress.version>
 
         <!--Plugin Version-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -516,12 +516,6 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${poi.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.commons</groupId>
-                        <artifactId>commons-compress</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -580,15 +574,9 @@
             </dependency>
 
             <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz</artifactId>
-                <version>${quzrtz.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.quartz-scheduler</groupId>
-                <artifactId>quartz-jobs</artifactId>
-                <version>${quzrtz.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${compress.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
