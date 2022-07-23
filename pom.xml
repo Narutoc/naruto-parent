@@ -58,6 +58,9 @@
         <druid.version>1.2.8</druid.version>
         <net.bytebuddy.version>1.11.22</net.bytebuddy.version>
         <compress.version>1.21</compress.version>
+        <xxl.rpc.version>1.6.0</xxl.rpc.version>
+        <xxl.job.version>2.3.1</xxl.job.version>
+        <groovy.version>2.5.7</groovy.version>
 
         <!--Plugin Version-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -577,6 +580,33 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>${compress.version}</version>
+            </dependency>
+
+            <!-- xxl-job-core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-rpc-core</artifactId>
+                <version>${xxl.rpc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job</artifactId>
+                <version>${xxl.job.version}</version>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl.job.version}</version>
+            </dependency>
+
+            <!--groovy dependency-->
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy</artifactId>
+                <version>${groovy.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
