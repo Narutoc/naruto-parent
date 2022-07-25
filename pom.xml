@@ -528,6 +528,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-schemas</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.zalando</groupId>
                 <artifactId>problem-spring-web</artifactId>
                 <version>${problem.version}</version>
